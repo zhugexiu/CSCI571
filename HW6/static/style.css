@@ -1,0 +1,241 @@
+body {
+    background-color: #6633CC;
+}
+
+.table{
+    text-align: left;
+    margin-left:200px;
+    margin-top: 200px;
+    background-color: #D8D8D8;
+    width: 850px;
+    height: 250px;
+}
+
+.title{
+    padding-left:300px;
+    padding-top:50px;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.search{
+    padding-left: 180px;
+}
+
+.button{
+    padding-top: 30px;
+    padding-left: 300px;
+}
+
+.buttonInside{
+    padding-top: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    background-color:white;
+    border-color: white;
+}
+
+.buttonInside:hover{
+    background: lightgray;
+}
+.buttonInside2{
+    margin-left: 40px;
+    padding-top: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    background-color:white;
+    border-color: white;
+}
+
+.buttonInside2:hover{
+    background: lightgray;
+}
+/*border*/
+
+.border{
+    text-align: left;
+    margin-left:200px;
+    margin-top: 20px;
+    width: 850px;
+}
+
+.table2 {
+    text-align: left;
+    margin-left:200px;
+    margin-top: 20px;
+    background-color: #D8D8D8;
+    width: 850px;
+}
+
+.table2 button:hover {
+  background-color: blue;
+}
+
+.table2:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.b1{
+    text-align: left;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    padding: 10px 24px;
+    float: left;
+
+}
+
+.b1:hover{
+     background-color: gray !important;
+}
+
+/*3*/
+.table3 {
+    text-align: left;
+    margin-left:200px;
+    margin-top: 30px;
+    background-color: white;
+    width: 850px;
+}
+
+/*1*/
+.table4{
+    width:850px;
+    border-collapse: collapse;
+    text-align: left;
+    margin-left:200px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.td1{
+    background-color: lightgray;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.td2{
+    background-color: lightgray;
+    border-right: 1px solid gray;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.td3{
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.td4{
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+/*2*/
+
+.summaryTable{
+    width:850px;
+    border-collapse: collapse;
+    text-align: left;
+    margin-left:200px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.fix{
+    border: 1px solid gray;
+    background-color: lightgray;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.fix2{
+    border: 1px solid gray;
+    text-align: center;
+}
+
+
+/*4*/
+
+.card{
+    text-align: left;
+    margin-left:200px;
+    margin-top: 20px;
+    background-color: #D8D8D8;
+    width: 850px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 90px;
+    height: 90px;
+    object-fit:cover;
+    padding: 5px;
+}
+
+.card .left{
+    float:left;
+    height: 70px;
+    width: 70px;
+    vertical-align:top;
+}
+
+.card .right{
+    text-align: left;
+    margin-left: 100px;
+    vertical-align:top;
+
+}
+
+.card .right .title1{
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+.card .right .date1{
+    margin-left: 5px;
+    font-size: 80%;
+}
+
+.card .right .post1{
+    margin-left: 5px;
+    font-size: 80%;
+}
+
+.ep{
+    margin-left:400px;
+    text-align: left;
+}
+
+#outlook{
+    background-color: #7a7a7a;
+}
+
+
+#h1{
+    display: inline-block;
+}
+#h2{
+    display: none;
+}
+#h3{
+    display: none;
+}
+#h4{
+    display: none;
+}
