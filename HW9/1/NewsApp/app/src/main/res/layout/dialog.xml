@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp">
+
+    <ImageView
+        android:id="@+id/imageView_dialogPic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/dialogImage"
+        android:minHeight="230dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textViewDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/textViewDialog"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_dialogPic" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDialog" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_dialogTwitter"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_dialogTwitter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDialog" />
+
+    <ImageView
+        android:id="@+id/imageView_dialogTwitter"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/dialogTwitter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintWidth_percent="0.5"
+        app:srcCompat="@drawable/bluetwitter" />
+
+    <ImageButton
+        android:id="@+id/imageButton_dialogBookmark"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_bookmark_black_nonclicked_24dp"
+        android:contentDescription="@string/dialogBookmark"
+        android:tag="no"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_dialogTwitter"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

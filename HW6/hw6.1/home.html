@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Stock Search</title>
+        <link href = "style.css" rel = "stylesheet" type = "text/css">
+    </head>
+
+    <body class = "body">
+        <div class = "table">
+            <p class = "title">Stock Search</p>
+            <form name="form" id="myForm">
+            <span class = "search">Enter Stock Ticket Symbol<span style="color:red;">*</span></span>
+            <input type="text" name="keyword" id="keyword" required/>
+
+            <div class = "button">
+                <input class = "buttonInside" type="button" id="submit" value="Search" onclick="myFunction1()" >
+                <input class = "buttonInside2" type="reset" value="Clear" onclick="fixReset()">
+            </div>
+            </form>
+        </div>
+
+
+        <hr class = "border"/>
+
+        <div id = "result">
+            <div class = "table2">
+                <div class = "nav">
+                    <button id = "outlook" name = "outlook" class="chosen" onclick="outlook()">Company OutLook</button>
+                    <button id = "summary" name = "summary" onclick="summary()">Stock Summary</button>
+                    <button id = "chart" name = "chart" onclick="chart()">Charts</button>
+                    <button id = "news" name = "news" onclick="news()">Latest News</button>
+                </div>
+            </div>
+
+            <div class = "table3">
+
+
+                <div id="h3" style="height: 400px; min-width: 310px">
+
+                </div>
+
+            </div>
+
+            <div id="h2" class = "h2">
+
+                </div>
+
+            <div id = "h1" class="res1">
+                <table class ="table4">
+                    <tr>
+                        <td class = "td1">Company Name</td><td class ='td2' id = "companyName"></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1">Stock Ticker Symbol</td><td class ='td2' id = "tickerSymbol"></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1">Stock Exchange Code</td><td class ='td2' id = "code"></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1">Company Start Date</td><td class ='td2' id = "startDate"></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1">Description</td><td class ='td3' id = "des"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="h4">
+                </div>
+        </div>
+
+        <div id = "moResult">
+        </div>
+
+        <div id = "Error">
+        </div>
+
+        <script>
+
+            document.getElementById('result').style.display="none";
+            function myFunction1() {
+            }
+            function fixReset() {
+                document.getElementById('result').style.display="none";
+                document.getElementById('Error').style.display="none";
+                document.getElementById('keyword').reset();
+            }
+            function outlook(){
+                document.getElementById('h1').style.display="inline-block";
+                document.getElementById('h2').style.display="none";
+                document.getElementById('h3').style.display="none";
+                document.getElementById('h4').style.display="none";
+                document.getElementById('outlook').style.background = "#7a7a7a";
+                document.getElementById('summary').style.background = "#D8D8D8";
+                document.getElementById('chart').style.background = "#D8D8D8";
+                document.getElementById('news').style.background = "#D8D8D8";
+            }
+            function summary(){
+                document.getElementById('h2').style.display="inline-block";
+                document.getElementById('h1').style.display="none";
+                document.getElementById('h3').style.display="none";
+                document.getElementById('h4').style.display="none";
+                document.getElementById('outlook').style.background = "#D8D8D8";
+                document.getElementById('summary').style.background = "#7a7a7a";
+                document.getElementById('chart').style.background = "#D8D8D8";
+                document.getElementById('news').style.background = "#D8D8D8";
+            }
+            function chart(){
+                document.getElementById('h3').style.display="inline-block";
+                document.getElementById('h1').style.display="none";
+                document.getElementById('h2').style.display="none";
+                document.getElementById('h4').style.display="none";
+                document.getElementById('outlook').style.background = "#D8D8D8";
+                document.getElementById('summary').style.background = "#D8D8D8";
+                document.getElementById('chart').style.background = "#7a7a7a";
+                document.getElementById('news').style.background = "#D8D8D8";
+            }
+            function news(){
+                document.getElementById('h4').style.display="inline-block";
+                document.getElementById('h2').style.display="none";
+                document.getElementById('h3').style.display="none";
+                document.getElementById('h1').style.display="none";
+                document.getElementById('outlook').style.background = "#D8D8D8";
+                document.getElementById('summary').style.background = "#D8D8D8";
+                document.getElementById('chart').style.background = "#D8D8D8";
+                document.getElementById('news').style.background = "#7a7a7a";
+            }
+        </script>
+        <script src="outlook.js"></script>
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    </body>
+
+</html>

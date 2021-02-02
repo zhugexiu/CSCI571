@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:layout_gravity="center_horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_bookmarkCard"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:contentDescription="@string/imageViewBookmarkCard"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView_bookmarkCard_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:padding="10dp"
+            android:text="@string/textViewBookmarkTitle"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_bookmarkCard" />
+
+        <ImageButton
+            android:id="@+id/imageButton_bookmarkButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_bookmark_black_clicked_24dp"
+            android:contentDescription="@string/imageButtonBookmarkCard"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_bookmarkCard_title" />
+
+        <TextView
+            android:id="@+id/textView_bookmarkCard_date"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/textViewBookmarkDate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_bookmarkCard_title" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_bookmarkCard_date"
+            app:layout_constraintStart_toEndOf="@id/textView_bookmarkCard_date"
+            app:layout_constraintTop_toTopOf="@id/textView_bookmarkCard_date" />
+
+        <TextView
+            android:id="@+id/textView_bookmarkCard_section"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:maxWidth="90dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/textViewBookmarkSection"
+            app:layout_constraintStart_toEndOf="@+id/divider4"
+            app:layout_constraintTop_toTopOf="@+id/textView_bookmarkCard_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

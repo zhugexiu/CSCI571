@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <style name="ProgressBar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">#673AB7</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverLay" parent="Theme.AppCompat.Light.DarkActionBar"/>
+    
+    <style name="myEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#A0A0A0</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.xudong.mynewsapplication.mainFragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/headlinesFragment"
+        android:name="com.xudong.mynewsapplication.mainFragment.HeadlinesFragment"
+        android:label="Headlines"
+        tools:layout="@layout/headlines_fragment" />
+    <fragment
+        android:id="@+id/trendingFragment"
+        android:name="com.xudong.mynewsapplication.mainFragment.TrendingFragment"
+        android:label="Trending"
+        tools:layout="@layout/trending_fragment" />
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.xudong.mynewsapplication.mainFragment.BookmarkFragment"
+        android:label="Bookmark"
+        tools:layout="@layout/bookmark_fragment" />
+</navigation>

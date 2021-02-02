@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="nonClickBookmark">nonClickBookmark</string>
+    <string name="newsImagePreview">newsImagePreview</string>
+    <string name="newsCardSummary">newsCardSummary</string>
+    <string name="newsCardTime">newsCardTime</string>
+    <string name="newsCardSection">newsCardSection</string>
+    <string name="imageViewWeather">imageViewWeather</string>
+    <string name="weatherCardCity">weatherCardCity</string>
+    <string name="weatherCardState">weatherCardState</string>
+    <string name="weatherCardTemperature">weatherCardTemperature</string>
+    <string name="weatherCardType">weatherCardType</string>
+    <string name="progressBar_news">Fetching News</string>
+    <string name="detailImage">detailImage</string>
+    <string name="textViewDetailTitle">textViewDetailTitle</string>
+    <string name="detailSection">detailSection</string>
+    <string name="detailDate">detailDate</string>
+    <string name="detailDesc">detailDesc</string>
+    <string name="detailBottomLink">View Full Article</string>
+    <string name="imageViewBack">imageViewBack</string>
+    <string name="NewsApp">NewsApp</string>
+    <string name="detailBookmarkUnclicked">detailBookmarkUnclicked</string>
+    <string name="detailTwitter">detailTwitter</string>
+    <string name="dialogImage">dialogImage</string>
+    <string name="textViewDialog">textViewDialog</string>
+    <string name="dialogTwitter">dialogTwitter</string>
+    <string name="dialogBookmark">dialogBookmark</string>
+
+    <string name="tab_text_1">WORLD</string>
+    <string name="tab_text_2">BUSINESS</string>
+    <string name="tab_text_3">POLITICS</string>
+    <string name="tab_text_4">SPORTS</string>
+    <string name="tab_text_5">TECHNOLOGY</string>
+    <string name="tab_text_6">SCIENCE</string>
+    <string name="searchBar">searchBar</string>
+    <string name="trendingTextGuide">Enter Search Term:</string>
+    <string name="trendingHint">CoronaVirus</string>
+    <string name="imageViewBookmarkCard">imageViewBookmarkCard</string>
+    <string name="textViewBookmarkTitle">BookmarkTitle</string>
+    <string name="imageButtonBookmarkCard">imageButtonBookmarkCard</string>
+    <string name="textViewBookmarkDate">04 April</string>
+    <string name="textViewBookmarkSection">Politics</string>
+    <string name="textViewNoBookmark">No Bookmarked Articles</string>
+
+    <string-array name="query_suggestion">
+        <item>aaaa</item>
+        <item>bbbb</item>
+        <item>cccc</item>
+        <item>aabb</item>
+    </string-array>
+</resources>
