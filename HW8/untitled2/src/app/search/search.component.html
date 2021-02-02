@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container mt-5 mr-auto ml-auto">
+
+      <div style="text-align:center;margin-top: 250px;"><p style = "font-weight: bold;font-size: 300%">STOCK SEARCH</p></div>
+      <div class = "input-group mr-auto ml-auto search-group" style = "max-width:250px;margin-top:70px">
+          <input class="form-control rounded-pill"
+                 type="text"
+                 placeholder="Enter Stock Name" aria-label="Search"
+                 id ="input"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto"
+                 required>
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngIf="show"><mat-spinner [diameter] = "30"></mat-spinner></mat-option>
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                <b>{{option.ticker}}</b> | {{option.name}}
+              </mat-option>
+          </mat-autocomplete>
+          <div class="input-group-prepend">
+            <button class="btn btn-link" type="button" (click)="finds()">
+              <span class="fa fa-search" style="color: #6D40F3"></span></button>
+          </div>
+      </div>
+
+</div>
+
+

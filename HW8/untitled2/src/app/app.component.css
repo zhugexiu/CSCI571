@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  height: 100%;
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header{
+  background: #999;
+  flex: 0 0 auto;
+  margin-bottom: 20px;
+}
+.main{
+  flex: 1 0 auto;
+}
+footer{
+  margin-top: 40px;
+  background: lightgray;
+  flex: 0 0 auto;
+}

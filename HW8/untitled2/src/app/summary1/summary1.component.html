@@ -1,0 +1,34 @@
+<div *ngIf="cha < 60; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <table style="width:100%; font-size: 90%">
+    <tr>
+      <td style ="display:inline;text-align:left;">High Price: {{s1.high}}</td><td style = "float:right;display:inline;">Mid Price:{{s1.mid}}</td>
+    </tr>
+    <tr>
+      <td style ="display:inline;text-align:left;">Low Price: {{s1.low}}</td><td style = "float:right;display:inline;">Ask Price: {{s1.askPrice}}</td>
+    </tr>
+    <tr>
+      <td style ="display:inline;text-align:left;">Open Price: {{s1.open}}</td><td style = "float:right;display:inline;">Ask Size: {{s1.askSize}}</td>
+    </tr>
+    <tr>
+      <td style ="display:inline;text-align:left;">Close Price: {{s1.prevClose}}</td><td style = "float:right;display:inline;">Bid Price: {{s1.bidPrice}}</td>
+    </tr>
+    <tr>
+      <td style ="display:inline;text-align:left;">Volume: {{s1.volume}}</td><td style = "float:right;display:inline;">Bid Size: {{s1.bidSize}}</td>
+    </tr>
+  </table>
+
+
+</ng-template>
+<ng-template #elseBlock>
+  <div style = "font-size: 90%">
+    <p>High Price: {{s1.high}}</p>
+    <p>Low Price: {{s1.low}}</p>
+    <p>Open Price: {{s1.open}}</p>
+    <p>Close Price: {{s1.prevClose}}</p>
+    <p>Volume: {{s1.volume}}</p>
+  </div>
+</ng-template>
+
+
+

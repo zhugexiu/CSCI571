@@ -1,0 +1,186 @@
+
+
+
+<div *ngIf="showSpinner">
+  <mat-spinner style = "margin-left: 40%;margin-top:10%"></mat-spinner>
+</div>
+<div *ngIf="!showSpinner">
+  <div class="container">
+    <div *ngIf="showAlert">
+      <div class="alert alert-warning" role="alert">
+        Currently you don't have any stock.
+      </div>
+    </div>
+    <div *ngIf="!showAlert">
+      <div style ="margin-left: 5px"><p class = "title">My Portfolio</p></div>
+      <div class = "row" style="margin-left:0;margin-right:0;">
+        <div class = "col">
+          <div class="card" *ngFor="let n of ans" style = "margin-bottom: 10px">
+            <div *ngIf="n[8]">
+                <div class="card-header">
+                  <a routerLink="/detail/{{n[0]}}">
+                    <span style="color: black; font-family: 'Roboto',serif; font-size: 1.7rem; font-weight: 400;">{{n[0]}}</span><span class="ml-2" style="color: #6C7179; font-family: 'Roboto'; font-size: 1.2rem; font-weight: 400;">{{n[1]}}</span>
+                  </a>
+                </div>
+                <div class="card-body" style="color: black; font-family: 'Roboto',serif;">
+                  <div class = "row">
+                    <div class = "col-md-6">
+                      <div style = "float:left">Quantity:</div> <div style = "float:right">{{n[2]}}</div>
+                    </div>
+                    <div class = "col-md-6">
+                      <div>
+                        <div style = "float:left">Change:</div>
+                        <div style = "float:right">
+                          <div>
+                        <span *ngIf="n[3]>0" style = "color: green; float:right;" ><svg width="0.8em" color = "green"height="0.8em" viewBox="0 0 16 16" class="bi bi-caret-up-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+</svg>{{n[3]}}</span>
+                            <span *ngIf="n[3]==0" style = "float:right;" >{{n[3]}}</span>
+                            <span *ngIf="n[3]<0" style = "color: red;float:right;" ><svg width="0.8em" color="red" height="0.8em" viewBox="0 0 16 16" class="bi bi-caret-down-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>{{n[3]}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class = "row">
+                    <div class = "col-md-6">
+                      <div style = "float:left">Avg.Cost/Share:</div> <div style = "float:right">{{n[4]}}</div>
+                    </div>
+                    <div class = "col-md-6">
+                      <div>
+                        <div style = "float:left">Current Price:</div>
+                        <div style = "float:right">
+                          <div style = "float:right">
+                            <div>
+                              <span *ngIf="n[3]>0" style = "color: green; float:right;" >{{n[5]}}</span>
+                              <span *ngIf="n[3]==0" style = "float:right;" >{{n[5]}}</span>
+                              <span *ngIf="n[3]<0" style = "color: red;float:right;" >{{n[5]}}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class = "row">
+                    <div class = "col-md-6">
+                      <div style = "float:left">Total Cost:</div> <div style = "float:right">{{n[6]}}</div>
+                    </div>
+                    <div class = "col-md-6">
+                      <div>
+                        <div style = "float:left">Market Value:</div>
+                        <div style = "float:right">
+                          <span *ngIf="n[3]>0" style = "color: green; float:right;" >{{n[7]}}</span>
+                          <span *ngIf="n[3]==0" style = "float:right;" >{{n[7]}}</span>
+                          <span *ngIf="n[3]<0" style = "color: red;float:right;" >{{n[7]}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "card-footer ">
+                  <button class="btn btn-outline-primary mb-2 mr-2" style ="font-size: 10px;float:right; background-color: red;color:white;" (click)="open(sellmodal)">Sell</button>
+                  <button class="btn btn-outline-primary mb-2 mr-2" style ="font-size: 10px;float:right; background-color: dodgerblue;color:white;" (click)="open(buymodal)">Buy</button>
+                </div>
+                <ng-template #buymodal let-modal>
+                  <div>
+                    <div class="modal-header">
+                      <p>{{n[0]}}</p>
+                      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div ng-app="" class="modal-body">
+                    <p>Current Price: {{n[5]}}</p>
+                    <style>
+                      body {padding: 10px;margin: 10px}
+                      input[type=number] {
+                        /*for absolutely positioning spinners*/
+                        position: relative;
+                        padding: 5px;
+                        padding-right: 25px;
+                      }
+
+                      input[type=number]::-webkit-inner-spin-button,
+                      input[type=number]::-webkit-outer-spin-button {
+                        opacity: 1;
+                      }
+
+                      input[type=number]::-webkit-outer-spin-button,
+                      input[type=number]::-webkit-inner-spin-button {
+                        -webkit-appearance: inner-spin-button !important;
+                        width: 25px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                      }
+                    </style>
+                    <meta name="apple-mobile-web-app-capable" content="yes"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"/>
+                    <p><label for="quantity">Quantity:</label><input id = "quantity" type="number" value ="0" step="1" autofocus="autofocus" (keyup)="onKey($event)"/></p>
+                  </div>
+                  <div class = "modal-footer justify-content-between">
+                    <div id = "total">Total: {{(buyQ*n[5]).toFixed(2)}}</div>
+                    <button class="btn btn-success"  [disabled]="!buyQ|| buyQ < 1"  (click)="buyStock(n[0],n[5],buyQ); modal.close();
+                        n[2] = n[2]+buyQ; n[6] = (n[6] + buyQ*n[5]).toFixed(2); n[4] = (n[6]/n[2]).toFixed(2);n[7] = (n[5]*n[2]).toFixed(2);">Buy</button>
+                  </div>
+                </ng-template>
+
+                <ng-template #sellmodal let-modal>
+                  <div>
+                    <div class="modal-header ">
+                      <p>{{n[0]}}</p>
+                      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div ng-app="" class="modal-body">
+                    <p>Current Price: {{n[5]}}</p>
+                    <style>
+                      body {padding: 10px;margin: 10px}
+                      input[type=number] {
+                        /*for absolutely positioning spinners*/
+                        position: relative;
+                        padding: 5px;
+                        padding-right: 25px;
+                      }
+
+                      input[type=number]::-webkit-inner-spin-button,
+                      input[type=number]::-webkit-outer-spin-button {
+                        opacity: 1;
+                      }
+
+                      input[type=number]::-webkit-outer-spin-button,
+                      input[type=number]::-webkit-inner-spin-button {
+                        -webkit-appearance: inner-spin-button !important;
+                        width: 25px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                      }
+                    </style>
+                    <meta name="apple-mobile-web-app-capable" content="yes"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"/>
+                    <p><label for="quantity2">Quantity:</label><input id = "quantity2" type="number" value ="0" step="1" autofocus="autofocus" (keyup)="onKey2($event)"/></p>
+                  </div>
+                  <div class = "modal-footer justify-content-between">
+                    <div>Total: {{(SellQ*n[5]).toFixed(2)}}</div>
+                    <button class="btn btn-success"  [disabled]="!SellQ|| SellQ > n[2]"  (click)="sellStock(n[0],n[5],SellQ); modal.close();
+                                                                              n[2] = (n[2]-SellQ);n[6] = (n[6] - SellQ*n[5]).toFixed(2); n[4] = (n[6]/n[2]).toFixed(2);n[7] = (n[5]*n[2]).toFixed(2);
+                                                                              n[2] == 0 ? n[8] = false:n[8] = true;">Sell</button>
+                  </div>
+                </ng-template>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

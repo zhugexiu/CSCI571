@@ -1,0 +1,41 @@
+.left
+{
+  text-align:left;
+  margin-left:0;
+  font-weight: bold;
+  display:inline;
+  font-size: 200%;
+}
+#right
+{
+  text-align:right;
+  margin-right:0;
+  display:inline;
+}
+
+.left2
+{
+  text-align:left;
+  margin-left:0;
+  display:inline;
+  font-size: 150%;
+}
+
+.left3
+{
+  text-align:left;
+  margin-left:0;
+  display:inline;
+  font-size: 60%;
+}
+
+.right3
+{
+  float:right;
+  font-size:50%
+}
+
+.red{
+  background-color: lightpink;
+  font-size: 50%;
+}

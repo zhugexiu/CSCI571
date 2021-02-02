@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/../untitled2" libraries="{bootstrap, data, drag-panes, export-data, exporting, font-awesome, highstock, indicators, jquery, three-series-1000-points, volume-by-price, widgets}" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>
